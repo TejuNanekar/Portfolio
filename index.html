@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<script src="https://kit.fontawesome.com/ad399fe360.js" crossorigin="anonymous"></script>
+<body>
+<div id="header">
+    <div id="container">
+        <nav>
+            <ul id="sideM">
+                <li><a href="#">Home </a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">contact</a></li>
+                <li><i class="fa-solid fa-xmark" onclick="closem()"></i></li>
+           </ul>
+           <i class="fa-solid fa-bars" onclick="openm()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Teju</span> <br>nanekar from shirdi</h1>
+            <p>Porfolio shows learners, artistic ,creative ,innovative,rational,<br>copmrehensive and conceptual growth.
+                This porfolio<br> represents my systamatic efforts to achieve the excellent points.
+            </p>
+        </div>    
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="aboutcol-1">
+                <img src="about.png">
+            </div>
+            <div class="aboutcol-2">
+                <h1 class="subtitle">About me</h1>
+
+                <p>"My name is Tejaswini Nanekar,and my Portfolio is a
+                    representation of all that I've learned and 
+                    accomplished as aboutscience and engineering student.
+                    I design website for study purposeand help
+                    myself to build a skill better.<br>The writing sample in this Portfolio
+                    show how my critical thinkimg skill have evolved over the course of the program"</p>
+            </div>
+</div>
+
+<div id="Education">
+    <div class="container">
+        <div class="row">
+            <div class="edutcol-1">
+                <img src="edu.png">
+            </div>
+            <div class="edutcol-2">
+                <h1 class="subtitle">Education</h1>
+            
+                <div class="tabt">
+                    <p class="tab-links activelink" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-content active-tab" id="skills">
+                    <ul>
+                        <li><span>Communication</span><br>communicate using languages like english,hindi,marathi</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Python</span><br>Designing web/interfaces</li>
+                    </ul>    
+                </div>
+                <div class="tab-content" id="experiance">
+                    <ul>
+                        <li><span>2023-Current</span><br>Studying in CE</li>
+                        <li><span>2021-2022</span><br>Web  Development</li>
+                            
+                    </ul>    
+                </div>
+                <div class="tab-content" id="education">
+                    <ul>
+                        <li><span>2023-Current</span><br>persuing  3rd year in computer engineering at yeola. </li>
+                        <li><span>2018-2020</span><br>Higher secondary education at SSJ college Shirdi</li>
+                        <li><span>School</span><br>Secondary education at SSMV shirdi</li>
+                    </ul>    
+                </div>
+                  
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> tejn354@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i>9455677899</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/teju_n25" target="_blank">
+                        <i class="fa-brands fa-square-instagram"></i>
+            
+                    </a>
+                    <a href="https://github.com/TejuNanekar " target="_blank">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tejaswini-nanekar-2821a2238 " target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="your message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @Teju2023 Web developer</p>
+        </div>
+</div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-content");
+    
+    function opentab(tabname){
+        for(tablink  of tablinks){
+            tablink.classList.remove("activelink");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("activelink");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script> 
+<script>
+    var sidemenu=document.getElementById("sideM");
+    function openm(){
+        sidemenu.style.right="0";
+    }
+    function closem(){
+        sidemenu.style.right="-200px";
+    }
+</script>   
+</body>
+</html>
